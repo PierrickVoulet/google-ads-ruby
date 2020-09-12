@@ -20,6 +20,7 @@
 require 'optparse'
 require 'google/ads/google_ads'
 
+# [START Y5ZjMzMzE3]
 def get_account_changes(customer_id)
   # GoogleAdsClient will read a config file from
   # ENV['HOME']/google_ads_config.rb when called without parameters
@@ -69,6 +70,7 @@ def get_account_changes(customer_id)
          "with resource name #{resource_name} was #{cs.resource_status}."
   end
 end
+# [END Y5ZjMzMzE3]
 
 if __FILE__ == $PROGRAM_NAME
   PAGE_SIZE = 1000

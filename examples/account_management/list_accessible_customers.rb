@@ -25,6 +25,7 @@
 require 'optparse'
 require 'google/ads/google_ads'
 
+# [START UwYzljZDc5]
 def list_accessible_customers()
   # GoogleAdsClient will read a config file from
   # ENV['HOME']/google_ads_config.rb when called without parameters
@@ -36,6 +37,7 @@ def list_accessible_customers()
     puts "Customer resource name: #{resource_name}"
   end
 end
+# [END UwYzljZDc5]
 
 if __FILE__ == $0
   PAGE_SIZE = 1000

@@ -72,8 +72,10 @@ def add_campaign_budget(client, customer_id)
 end
 
 # Creates a new campaign in the specified client account.
+# [START FiYWIyNzI4]
 def add_hotel_campaign(client, customer_id, budget_resource,
     hotel_center_account_id, cpc_bid_ceiling_micro_amount)
+  # [START dmMjIyZmNl]
   # Create a campaign.
   campaign_operation = client.operation.create_resource.campaign do |c|
     c.name = generate_random_name_field("Interplanetary Cruise Campaign")
@@ -104,6 +106,7 @@ def add_hotel_campaign(client, customer_id, budget_resource,
       ns.target_google_search = true
     end
   end
+  # [END dmMjIyZmNl]
 
   # Issue a mutate request to add the campaign.
   campaign_service = client.service.campaign
@@ -119,6 +122,7 @@ def add_hotel_campaign(client, customer_id, budget_resource,
 
   campaign_resource
 end
+# [END FiYWIyNzI4]
 
 # Creates a new hotel ad group in the specified campaign.
 def add_hotel_ad_group(client, customer_id, campaign_resource)

@@ -20,6 +20,7 @@
 require 'optparse'
 require 'google/ads/google_ads'
 
+# [START E1Y2UzODU5]
 def add_campaign_label(customer_id, label_id, campaign_ids)
   # GoogleAdsClient will read a config file from
   # ENV['HOME']/google_ads_config.rb when called without parameters
@@ -47,6 +48,7 @@ def add_campaign_label(customer_id, label_id, campaign_ids)
     puts("Created campaign label with id: #{result.resource_name}")
   end
 end
+# [END E1Y2UzODU5]
 
 if __FILE__ == $0
   options = {}
